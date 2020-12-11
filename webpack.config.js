@@ -9,6 +9,14 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].[fullhash].js',
   },
+  performance: {
+    hints: false,
+  },
+  optimization: {
+    splitChunks: {
+      maxSize: 244000
+    }
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
